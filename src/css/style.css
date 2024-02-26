@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  grid-template-rows: 100vh 1650px max-content 882px;
+}
+
+.leftBar {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  height: 100vh;
+  width: 22%;
+  position: fixed;
+  left: 0;
+  background-color: rgb(47, 33, 77);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.leftBar .barItems {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-right: 60px;
+}
+
+.leftBar .barItems > div {
+  display: inline-flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.leftBar .barItems > div a {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  align-self: flex-end;
+  color: rgba(255, 255, 255, 0.342);
+  font-family: "Manrope";
+  transition: 0.8s;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.leftBar .barItems > div a:hover {
+  color: rgba(255, 255, 255, 0.603);
+}
+
+.leftBar .barItems > div hr {
+  width: 300px;
+  margin-top: 15px;
+  background-color: rgba(85, 49, 131, 0.418);
+  height: 3px;
+  border: none;
+}
+
+@keyframes hrAnimateActive {
+  from {
+    background: linear-gradient(
+      to left,
+      rgba(201, 82, 175, 0.842),
+      rgba(81, 33, 136, 0.801)
+    );
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(85, 49, 131, 0.418);
+  }
+
+  to {
+    background: linear-gradient(
+      to left,
+      rgba(225, 106, 255, 0.842),
+      rgba(81, 33, 136, 0.801)
+    );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(85, 49, 131, 0.418);
+  }
+}
+
+@keyframes hrAnimateNoActive {
+  from {
+    background: linear-gradient(
+      to left,
+      rgba(225, 106, 255, 0.842),
+      rgba(81, 33, 136, 0.801)
+    );
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  to {
+    background: linear-gradient(
+      to left,
+      rgba(201, 82, 175, 0.842),
+      rgba(81, 33, 136, 0.801)
+    );
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(85, 49, 131, 0.418);
+  }
+}
+
+.firstSection {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: rgb(91, 59, 158);
+  display: flex;
+  align-items: center;
+}
+
+.firstSection .items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "Manrope";
+  padding-left: 100px;
+}
+
+.firstSection .items h1 {
+  font-size: 60px;
+  color: white;
+}
+
+.firstSection .items p {
+  color: rgba(255, 255, 255, 0.61);
+  font-size: 32px;
+}
+
+.firstSection .items a {
+  text-decoration: none;
+  color: white;
+  width: max-content;
+  padding: 20px 50px;
+  border-radius: 40px;
+  font-size: 16px;
+  transition: 0.8s;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  margin-top: 40px;
+}
+
+.firstSection .items a:hover {
+  background: rgba(180, 180, 180, 0.103);
+}
+
+.secondSection {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.secondSection .secondSectionItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondSection .secondSectionItems > div img {
+  width: 550px;
+  height: 550px;
+}
+
+.secondSection .secondSectionItems > div > div h2 {
+  font-family: "Manrope";
+  font-size: 42px;
+  color: white;
+}
+
+.secondSection .secondSectionItems > div > div p {
+  font-family: "Manrope";
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.589);
+}
+
+.secondSection .secondSectionItems > div > div a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 40px;
+  width: max-content;
+  font-size: 16px;
+  transition: 0.8s;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  font-family: "Manrope";
+  margin-top: 20px;
+}
+
+.secondSection .secondSectionItems > div > div a:hover {
+  background: rgba(180, 180, 180, 0.103);
+}
+
+.secondSection .secondSectionItems .item1 {
+  background-color: rgb(84, 91, 189);
+}
+
+.secondSection .secondSectionItems .item2 {
+  background-color: rgb(73, 79, 170);
+}
+
+.secondSection .secondSectionItems .item3 {
+  background-color: rgb(62, 68, 156);
+}
+
+.secondSection .secondSectionItems > div {
+  display: flex;
+}
+
+.secondSection .secondSectionItems > div div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 120px 80px;
+}
+
+.thirdSection {
+  grid-column: 2;
+  grid-row: 3;
+  background: rgb(185, 81, 151);
+}
+
+.thirdSection .thirdSectionItems {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 90px 120px;
+}
+
+.thirdSection .thirdSectionItems .title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.thirdSection .thirdSectionItems .title h2 {
+  font-family: "Manrope";
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.thirdSection .thirdSectionItems .title p {
+  font-family: "Manrope";
+  color: rgba(255, 255, 255, 0.548);
+  font-size: 22px;
+  line-height: 35px;
+}
+
+.thirdSection .thirdSectionItems .items {
+  display: grid;
+  grid-template-columns: 640px 640px;
+  grid-template-rows: 300px 300px 300px;
+  align-self: center;
+}
+
+.thirdSection .thirdSectionItems .items > div > div .icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  font-family: "Manrope";
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.thirdSection .thirdSectionItems .items > div {
+  border: 1px rgba(255, 255, 255, 0.171) solid;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.034);
+}
+
+.thirdSection .thirdSectionItems .items > div .text h4 {
+  font-family: "Manrope";
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+}
+
+.thirdSection .thirdSectionItems .items > div .text p {
+  font-family: "Manrope";
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.548);
+  line-height: 35px;
+}
+
+.thirdSection .thirdSectionItems .items > div > div {
+  padding: 70px 90px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 20px;
+}
+
+.thirdSection .thirdSectionItems .items > div > div .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thirdSection .thirdSectionItems a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 50px;
+  border-radius: 40px;
+  width: max-content;
+  font-size: 16px;
+  transition: 0.8s;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  font-family: "Manrope";
+}
+
+.thirdSection .thirdSectionItems a:hover {
+  background: rgba(180, 180, 180, 0.103);
+}
+
+.fourSection {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: rgb(95, 63, 170);
+  height: max-content;
+}
+
+.fourSection .fourSectionContent {
+  display: grid;
+  grid-template-columns: 830px 1fr;
+  grid-template-rows: 180px 522px;
+  padding: 90px 100px;
+  height: 100%;
+}
+
+.fourSection .fourSectionContent .title {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fourSection .fourSectionContent .title h2 {
+  font-family: "Manrope";
+  font-size: 36px;
+  color: white;
+}
+
+.fourSection .fourSectionContent .title p {
+  font-family: "Manrope";
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.486);
+  line-height: 35px;
+}
+
+.fourSection .fourSectionContent .form {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.fourSection .fourSectionContent .form form {
+  display: grid;
+  grid-template-columns: 380px 380px;
+  grid-template-rows: 90px 267px 65px;
+  column-gap: 20px;
+  row-gap: 50px;
+}
+
+.fourSection .fourSectionContent .form form > div h4 {
+  font-family: "Manrope";
+  font-size: 24px;
+  color: white;
+}
+
+.fourSection .fourSectionContent .form form .name {
+  grid-column: 1;
+  grid-row: 1;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fourSection .fourSectionContent .form form .name input {
+  width: 330px;
+  border-radius: 5px;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  background-color: rgba(145, 113, 212, 0.185);
+  outline: 0;
+  font-family: "Manrope";
+  font-size: 20px;
+  padding: 14px 20px;
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.fourSection .fourSectionContent .form form .name input:focus,
+.fourSection .fourSectionContent .form form .email input:focus,
+.fourSection .fourSectionContent .form form .message textarea:focus {
+  border: 1px white solid;
+}
+
+.fourSection .fourSectionContent .form form .email {
+  grid-column: 2;
+  grid-row: 1;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fourSection .fourSectionContent .form form .email input {
+  width: 330px;
+  border-radius: 5px;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  background-color: rgba(145, 113, 212, 0.185);
+  outline: 0;
+  font-family: "Manrope";
+  font-size: 20px;
+  padding: 14px 20px;
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.fourSection .fourSectionContent .form form .message {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fourSection .fourSectionContent .form form .message textarea {
+  width: 730px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  background-color: rgba(145, 113, 212, 0.185);
+  outline: 0;
+  font-family: "Manrope";
+  font-size: 20px;
+  padding: 14px 20px;
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.fourSection .fourSectionContent .form form button {
+  color: white;
+  padding: 20px 50px;
+  border-radius: 40px;
+  width: max-content;
+  font-size: 16px;
+  transition: 0.8s;
+  border: 1px rgba(255, 255, 255, 0.158) solid;
+  background-color: rgba(144, 113, 212, 0);
+  font-family: "Manrope";
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.fourSection .fourSectionContent .form form button:hover {
+  background-color: rgba(144, 113, 212, 0.315);
+}
+
+.fourSection .fourSectionContent .contact {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 50px;
+  border-left: 1px rgba(255, 255, 255, 0.158) solid;
+}
+
+.fourSection .fourSectionContent .contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fourSection .fourSectionContent .contact > div h4 {
+  font-family: "Manrope";
+  font-size: 24px;
+  color: white;
+}
+
+.fourSection .fourSectionContent .contact .address p {
+  font-family: "Manrope";
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.486);
+  line-height: 35px;
+}
+
+.fourSection .fourSectionContent .contact > div a {
+  font-family: "Manrope";
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.486);
+  text-decoration: none;
+}
+
+.fourSection .fourSectionContent .contact .social a img {
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+}
